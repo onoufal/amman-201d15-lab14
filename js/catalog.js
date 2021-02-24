@@ -26,7 +26,7 @@ function populateForm() {
 function handleSubmit(event) {
   event.preventDefault();
   // TODO: Prevent the page from reloading
-  
+
   // cart.push(Product.allProducts[i].name);
 
 
@@ -43,22 +43,30 @@ function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
 
   let quantity = document.getElementById('quantity').value
+
+  let item = document.getElementById('items').value;
+  // TODO: get the quantity
   console.log(document.getElementById('quantity').value);
   console.log(document.getElementById('items').value);
-  let item=document.getElementById('items').value;
-
-
-
-
-
-  // TODO: get the quantity
-
   // TODO: using those, add one item to the Cart
-  Cart.items.push(value)
+  cart.addItem(item, quantity)
+
+  console.log(cart);
+
+
+
+
+
+
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() { }
+function updateCounter() {
+  let nav = document.getElementsByTagName('nav');
+  let counter = document.createElement('span');
+  // nav.appendChild(counter);
+
+}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {

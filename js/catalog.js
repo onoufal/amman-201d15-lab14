@@ -26,7 +26,10 @@ function populateForm() {
 function handleSubmit(event) {
   event.preventDefault();
   // TODO: Prevent the page from reloading
-  console.log(event.target.value);
+  
+  // cart.push(Product.allProducts[i].name);
+
+
   // Do all the things ...
   addSelectedItemToCart();
   cart.saveToLocalStorage();
@@ -41,15 +44,17 @@ function addSelectedItemToCart() {
 
   let quantity = document.getElementById('quantity').value
   console.log(document.getElementById('quantity').value);
-  let data = JSON.stringify(Product.allProducts.name)
-  console.log(data);
-  localStorage.setItem(, quantity)
+  console.log(document.getElementById('items').value);
+  let item=document.getElementById('items').value;
+
+
 
 
 
   // TODO: get the quantity
 
   // TODO: using those, add one item to the Cart
+  Cart.items.push(value)
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
